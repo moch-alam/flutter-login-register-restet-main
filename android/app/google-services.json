@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "522316746584",
+    "project_id": "apdinda-49",
+    "storage_bucket": "apdinda-49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522316746584:android:c37d5349eca13b38625f2d",
+        "android_client_info": {
+          "package_name": "com.example.dinda"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOhE7YL3iL0ic1_VITudiT2UpISVMIFBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

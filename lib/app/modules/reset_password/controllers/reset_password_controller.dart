@@ -1,0 +1,34 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../../routes/app_pages.dart';
+
+class ResetPasswordController extends GetxController {
+  //TODO: Implement ResetPasswordController
+
+  TextEditingController emailController = TextEditingController();
+  FirebaseAuth auth = FirebaseAuth.instance;
+
+  void resetPassword(String email) async {
+    if (email != "" && GetUtils.isEmail(email)) {
+      await auth.sendPasswordResetEmail(email: email);
+      Get.snackbar(
+        'Success',
+        'Password reset link sent to your email',
+        snackPosition: SnackPosition.BOTTOM,
+        duration: Duration(seconds: 2),
+        margin: EdgeInsets.all(12),
+      );
+      Get.offAllNamed(Routes.LOGIN);
+    } else {
+      Get.snackbar(
+        'Error',
+        'Please enter a valid email',
+        snackPosition: SnackPosition.BOTTOM,
+        duration: Duration(seconds: 2),
+        margin: EdgeInsets.all(12),
+      );
+    }
+  }
+}
